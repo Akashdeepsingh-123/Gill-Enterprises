@@ -48,11 +48,11 @@ export function useInView(threshold = 0.2) {
           observer.unobserve(ref);
         }
       },
-      { threshold }
+      { threshold: 0, rootMargin: '200px' }
     );
     observer.observe(ref);
     return () => observer.disconnect();
-  }, [ref, threshold]);
+  }, [ref]);
 
   return { ref: setRef, isInView };
 }
