@@ -80,16 +80,17 @@ export default function Navbar() {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 h-[80px] flex items-center ${
-        isScrolled
-          ? isDark
-            ? 'glass-dark-premium'
-            : 'glass-premium'
-          : 'bg-transparent'
-      }`}
-    >
-      <nav className="w-full max-w-7xl mx-auto px-6 lg:px-8">
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 h-[80px] flex items-center ${
+          isScrolled
+            ? isDark
+              ? 'glass-dark-premium'
+              : 'glass-premium'
+            : 'bg-transparent'
+        }`}
+      >
+        <nav className="w-full max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-4 group">
@@ -225,6 +226,7 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
+      </header>
 
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
@@ -328,6 +330,6 @@ export default function Navbar() {
           </>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }
