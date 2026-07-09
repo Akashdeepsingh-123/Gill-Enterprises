@@ -5,6 +5,19 @@
   <link rel="icon" type="image/png" href="/logo.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Theme Initialization -->
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
   <!-- Primary SEO -->
   <title>Gill Enterprises — Fresh Dairy, Premium Dry Fruits &amp; Courier Services in Dhariwal</title>
   <meta name="description" content="Gill Enterprises offers fresh dairy products, premium dry fruits, and trusted DHL, DTDC &amp; Blue Dart courier services in Dhariwal, Punjab. Quality products with reliable delivery under one roof." />
