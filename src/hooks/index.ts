@@ -52,7 +52,7 @@ export function useInView(threshold = 0.2) {
     );
     observer.observe(ref);
     return () => observer.disconnect();
-  }, [ref]);
+  }, [ref, threshold]);
 
   return { ref: setRef, isInView };
 }
